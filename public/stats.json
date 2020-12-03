@@ -7,7 +7,7 @@
             "DPS":"189",
             "RPM":"810",
             "Fire-Mode":["Single", "Auto"],
-            "Mag-Size":[""]
+            "Mag-Size":["18", "20", "25", "28"]
         },
         "R-99 SMG":{
             "Body Damage":"11",
@@ -16,7 +16,7 @@
             "DPS":"198",
             "RPM":"1080",
             "Fire-Mode":["Auto"],
-            "Mag-Size":[]
+            "Mag-Size":["20", "22", "24", "27"]
         },
         "P2020":{
             "Body Damage":"15",
@@ -25,7 +25,7 @@
             "DPS":"127",
             "RPM":"510",
             "Fire-Mode":["Single"],
-            "Mag-Size":[""]
+            "Mag-Size":["12", "14", "16", "18"]
         },
         "RE-45 Auto":{
             "Body Damage":"12",
@@ -34,7 +34,7 @@
             "DPS":"156",
             "RPM":"780",
             "Fire-Mode":["Auto"],
-            "Mag-Size":[""]
+            "Mag-Size":["16", "19", "22", "25"]
         },
         "Alternator":{
             "Body Damage":"15",
@@ -43,7 +43,7 @@
             "DPS":"150",
             "RPM":"600",
             "Fire-Mode":["Auto"],
-            "Mag-Size":[""]
+            "Mag-Size":["19", "22", "25", "27"]
         },
         "G-7 Scout":{
             "Body Damage":"34",
@@ -52,7 +52,7 @@
             "DPS":"141",
             "RPM":"250",
             "Fire-Mode":["Single","Burst (2)"],
-            "Mag-Size":[""]
+            "Mag-Size":["10", "15", "18", "20"]
         }
     },
     "heavy":{
@@ -63,7 +63,7 @@
             "DPS":"112",
             "RPM":"150",
             "Fire-Mode":["Single"],
-            "Mag-Size":[""]
+            "Mag-Size":["5", "6", "7", "8"]
         },
         "Spitfire":{
             "Body Damage":"18",
@@ -72,7 +72,7 @@
             "DPS":"162",
             "RPM":"540",
             "Fire-Mode":["Auto"],
-            "Mag-Size":[""]
+            "Mag-Size":["35", "40", "45", "55"]
         },
         "Flatline":{
             "Body Damage":"19",
@@ -81,7 +81,7 @@
             "DPS":"190",
             "RPM":"600",
             "Fire-Mode":["Auto", "Single"],
-            "Mag-Size":[""]
+            "Mag-Size":["20", "25", "28", "30"]
         },
         "Hemlok":{
             "Body Damage":"66 (22x3)",
@@ -90,7 +90,7 @@
             "DPS":"179.67",
             "RPM":"490",
             "Fire-Mode":["Single", "Burst"],
-            "Mag-Size":""
+            "Mag-Size":["18", "24", "27", "30"]
         }
 
     },
@@ -131,7 +131,7 @@
             "DPS":"40",
             "RPM":"34.29",
             "Fire-Mode":["Single"],
-            "Mag-Size":""
+            "Mag-Size":["4", "5", "6", "7"]
         },
         "Longbow":{
             "Body Damage":"55",
@@ -140,7 +140,7 @@
             "DPS":"64.17",
             "RPM":"70",
             "Fire-Mode":["Single"],
-            "Mag-Size":""
+            "Mag-Size":["6", "8", "10", "12"]
         },
         "Tripletake":{
             "Body Damage":"69 (23x3)",
@@ -149,7 +149,7 @@
             "DPS":"101.2",
             "RPM":"88",
             "Fire-Mode":["Single"],
-            "Mag-Size":""
+            "Mag-Size":["6", "7", "8", "9"]
         },
         "Charge Rifle":{
             "Body Damage":"90 (3x15 + 45)",
@@ -169,7 +169,7 @@
             "DPS":"192",
             "RPM":"685~",
             "Fire-Mode":["Auto"],
-            "Mag-Size":""
+            "Mag-Size":["36", "40", "44", "48"]
         },
         "L-STAR":{
             "Body Damage":"18",
@@ -178,7 +178,7 @@
             "DPS":"180",
             "RPM":"600",
             "Fire-Mode":["Auto"],
-            "Mag-Size":""
+            "Mag-Size":["23"]
         },
         "Havoc":{
             "Body Damage":"18",
@@ -187,7 +187,7 @@
             "DPS":"202",
             "RPM":"672",
             "Fire-Mode":["Auto", "Single"],
-            "Mag-Size":""
+            "Mag-Size":["24", "28", "32", "36"]
         },
         "Volt SMG":{
             "Body Damage":"16",
@@ -196,7 +196,7 @@
             "DPS":"208.8",
             "RPM":"783",
             "Fire-Mode":["Auto"],
-            "Mag-Size":""
+            "Mag-Size":["19", "21", "23", "26"]
         }
     },
     "special":{
