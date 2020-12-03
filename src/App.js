@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       Apex Legends Weapon Stat Table
+      Test
     </div>
   );
 }
