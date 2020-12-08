@@ -1,6 +1,9 @@
 .btn-light{
     background-color: #edae40 !important;
 }
+.btn-light:active,.btn-heavy:active,.btn-light:hover{
+    background-color: #000000 !important;
+}
 .btn-heavy{
     background-color: #069910 !important;
 }
@@ -12,4 +15,11 @@
 }
 .btn-energy{
     background-color: #a6ff00 !important;
+}
+.lightwep{
+    background-color: black;
+}
+.icon{
+    height: 10px;
+    width:20px;
 }

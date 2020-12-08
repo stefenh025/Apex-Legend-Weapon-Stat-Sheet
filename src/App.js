@@ -3,7 +3,7 @@ import DmgTableMain from './DmgTableMain.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container App">
       Apex Legends Weapon Stat Table
       <div>
         <DmgTableMain />
