@@ -7,7 +7,7 @@ export default class SortButtons extends React.Component{
     render(){
         let capitalType = this.props.type.charAt(0).toUpperCase() + this.props.type.slice(1);
         return(
-            <label className={"btn btn-sm rounded-pill " + (this.props.toggleButton === this.props.type ? "btn-active" : "btn-" + this.props.type + "w")}>
+            <label className={"btn btn-padding rounded-pill " + (this.props.toggleButton === this.props.type ? "btn-active" : "btn-" + this.props.type + "w")}>
             {/* <span className="lightwep icon"></span> */}
             <input 
             type="radio" 
@@ -20,4 +20,4 @@ export default class SortButtons extends React.Component{
         </label>
         )
     }
-}
+};

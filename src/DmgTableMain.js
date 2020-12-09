@@ -1,6 +1,7 @@
 import React from 'react';
 import './customButton.css';
 import SortButtons from './sortButtons.js';
+import WeaponTable from './weaponTable.js';
 
 export default class DmgTableMain extends React.Component{
     constructor(props){
@@ -19,7 +20,7 @@ export default class DmgTableMain extends React.Component{
     render(){
         return(
             <div className="container">
-                <div className="btn-group btn-group-toggle float-right">
+                <div className="btn-group btn-group-toggle">
                     <SortButtons type="all" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                     <SortButtons type="light" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                     <SortButtons type="heavy" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
@@ -28,7 +29,8 @@ export default class DmgTableMain extends React.Component{
                     <SortButtons type="sniper" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                     <SortButtons type="special" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                 </div>
-                {/* <Table /> */}
+                {/* Decide on a layout method, either page break, grid, flex box etc to structure */}
+                <WeaponTable toggleButton={this.state.toggleButton} />
             </div>
         )
     }

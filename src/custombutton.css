@@ -24,8 +24,9 @@
 .btn-specialw{
     background-color: #ff0037 !important;
 }
-.lightwep{
-    background-color: black;
+.btn-padding{
+    padding:0px 24px !important;
+    margin:0px 2px !important;
 }
 .icon{
     height: 10px;
