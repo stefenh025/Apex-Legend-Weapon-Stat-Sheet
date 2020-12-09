@@ -1,20 +1,28 @@
-.btn-light{
+.btn-allw{
+    background-color: lightcoral !important;
+}
+.btn-lightw{
     background-color: #edae40 !important;
 }
-.btn-light:active,.btn-heavy:active,.btn-light:hover{
-    background-color: #000000 !important;
+.btn-active{
+    background-color: #464c4d !important;
+    color: white;
+    border-color: #464cd4;
 }
-.btn-heavy{
+.btn-heavyw{
     background-color: #069910 !important;
 }
-.btn-sniper{
+.btn-sniperw{
     background-color: #9585ff !important;
 }
-.btn-shotgun{
+.btn-shotgunw{
     background-color: #ff0d00 !important;
 }
-.btn-energy{
+.btn-energyw{
     background-color: #a6ff00 !important;
+}
+.btn-specialw{
+    background-color: #ff0037 !important;
 }
 .lightwep{
     background-color: black;

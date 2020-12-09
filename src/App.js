@@ -1,5 +1,5 @@
 import './App.css';
-import DmgTableMain from './DmgTableMain.js';
+import DmgTableMain from './dmgTableMain.js';
 
 function App() {
   return (
