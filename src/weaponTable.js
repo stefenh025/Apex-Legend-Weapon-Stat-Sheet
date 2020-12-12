@@ -8,7 +8,7 @@ export default class WeaponTable extends React.Component{
         }
         this.addTableBody = this.addTableBody.bind(this);
     }
-    //Attempt to add data into table
+    //Attempt to add data into table, try looking at object methods provided by javascript
     addTableBody(arr){
       let temp = "";
       for(var i = 0; i < arr.length; i++){
