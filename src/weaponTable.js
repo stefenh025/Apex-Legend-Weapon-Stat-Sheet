@@ -64,8 +64,8 @@ export default class WeaponTable extends React.Component{
       
         return(
             <div>
-                <table className="table table-dark">
-                  <thead>
+                <table className="table-responsive table-bordered table-dark">
+                  <thead className="thead-dark">
                     {tableHead}
                   </thead>
                   <tbody>
