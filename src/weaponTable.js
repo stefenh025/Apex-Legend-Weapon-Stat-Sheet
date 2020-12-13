@@ -6,20 +6,50 @@ export default class WeaponTable extends React.Component{
         this.state={
 
         }
-        this.addTableBody = this.addTableBody.bind(this);
-    }
-    //Attempt to add data into table, try looking at object methods provided by javascript
-    addTableBody(arr){
-      let temp = "";
-      for(var i = 0; i < arr.length; i++){
-        temp = temp + "<tr>" + arr[i] + "</tr>";
+        this.getTableBody = this.getTableBody.bind(this);
+        this.createTableBody = this.createTableBody.bind(this);
+    };
+    createTableBody(arr, tableBody, key){
+      tableBody.push(
+        <tr key={key}>
+          {arr}
+        </tr>
+      );
+    };
+    getTableBody(){
+      let tableBody = [];
+      let tempStatHolder = [];
+      for (var ammo in this.props.statData){
+        for (var gunName in this.props.statData[ammo]){
+          //Could use object entries here to skip a loop
+          tempStatHolder = [];
+          tempStatHolder.push(
+            <td key={gunName}>{gunName}</td>
+          );
+          tempStatHolder.push(
+            <td key={ammo + "" + gunName}>{ammo.charAt(0).toUpperCase() + ammo.slice(1)}</td>
+          );
+          for (var weaponStats in this.props.statData[ammo][gunName]){
+            if (typeof(this.props.statData[ammo][gunName][weaponStats]) === "object"){
+              tempStatHolder.push(
+                <td key={gunName + "" + weaponStats}>{this.props.statData[ammo][gunName][weaponStats] + ""}</td>
+              )
+            }
+            else{
+              tempStatHolder.push(
+                <td key={gunName + "" + weaponStats}>{this.props.statData[ammo][gunName][weaponStats]}</td>
+              )
+            }
+          };
+          this.createTableBody(tempStatHolder,tableBody, gunName);
+        }
       }
-      return temp;
-    }
+      return tableBody;
+    };
     render(){
       //Trial Data
         let tableHead = (
-          <tr>
+          <tr key="Header">
           <th>Gun Name</th>
           <th>Ammo Type</th>
           <th>Body Damage</th>
@@ -31,33 +61,15 @@ export default class WeaponTable extends React.Component{
           <th>Mag Size</th>
           </tr>
         );
-        
-        let tableBody = [];        
-        let tempStatHolder;
-        for (var ammo in this.props.statData){
-          for (var gunName in this.props.statData[ammo]){
-            //Could use object entries here to skip a loop
-            tempStatHolder = [];
-            for (var weaponStats in this.props.statData[ammo][gunName]){
-              tempStatHolder.push(this.props.statData[ammo][gunName][weaponStats]);
-            }
-            // tableBody.push(
-            //   <tr>
-            //     {this.addTableBody(tempStatHolder)}
-            //   </tr>
-            // );
-            tempStatHolder = [];
-          }
-        }
+      
         return(
             <div>
-                Hi
                 <table className="table table-dark">
                   <thead>
-                      {tableHead}
+                    {tableHead}
                   </thead>
                   <tbody>
-                    {tableBody}
+                    {this.getTableBody()}
                   </tbody>
                 </table>
             </div>

@@ -3,7 +3,7 @@ import './customButton.css';
 import SortButtons from './sortButtons.js';
 import WeaponTable from './weaponTable.js';
 const json = require('./stats.json');
-//const obj = JSON.parse(json);
+
 
 export default class DmgTableMain extends React.Component{
     constructor(props){
@@ -12,11 +12,21 @@ export default class DmgTableMain extends React.Component{
             toggleButton:"all",
         }
         this.handleonChange = this.handleonChange.bind(this);
+        this.filterType = this.filterType.bind(this);
     }
     handleonChange(e){
         this.setState({
             toggleButton: e.target.value,
         });
+    }
+    filterType(){
+      let filteredJson = [];
+      for (var ammo in json) {
+        if (ammo === this.state.toggleButton) {
+          filteredJson.push(json[ammo]);
+        }
+      }
+      return filteredJson;
     }
     //Load in data from Json here, pass in data as props for child component, sort function done here
     render(){
@@ -32,9 +42,16 @@ export default class DmgTableMain extends React.Component{
       //     }
       //   }
       // }
+        let stats;
+        if (this.state.toggleButton === "all"){
+          stats = json;
+        }
+        else {
+          stats = this.filterType();
+        }
         return(
-            <div className="container">
-                <div className="btn-group btn-group-toggle d-flex flex-wrap">
+            <div className="container-fluid">
+                <div className="btn-group btn-group-toggle d-flex flex-wrap justify-content-center">
                     <SortButtons type="all" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                     <SortButtons type="light" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                     <SortButtons type="heavy" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
@@ -44,7 +61,7 @@ export default class DmgTableMain extends React.Component{
                     <SortButtons type="special" toggleButton={this.state.toggleButton} handleonChange={this.handleonChange} />
                 </div>
                 {/* Decide on a layout method, either page break, grid, flex box etc to structure */}
-                <WeaponTable statData={json} />
+                <WeaponTable statData={stats} />
             </div>
         )
     }
